@@ -38,8 +38,9 @@ public/
 
 ### 3. Credentials & Privacy
 
-* A simple credentials file (`credentials.json`) maps four- or five-digit codes to child IDs.
+* A simple credentials file (`credentials.json`) maps Foldernames and Passwords. I used Numbers (4-5 digits long) instead of Kids/ Family-Names (that adds Privacy + Security - other Parents can`t guess other peoples login name). Adjust Passwort difficulty as desired. 
 * **No complicated auth**: No email or phone number required—only a code per family ensures ease of use and data privacy.
+* After the Photoshoot we printed the credentials (with a short letter explaining the procces/ how-to use the website) and handed them out at the Daycare.
 
 ### 4. Robots.txt
 
