@@ -22,7 +22,7 @@ function Gallery() {
 useEffect(() => {
   if (!childName) return;
 
-  const BUCKET = "kita-fotos-langenbieber.firebasestorage.app";
+   const BUCKET = "your-app-name.appspot.com";
   // photos.json URL:
   const jsonUrl =
     `https://firebasestorage.googleapis.com/v0/b/${BUCKET}/o/` +
@@ -70,7 +70,7 @@ useEffect(() => {
       <ol>    
         <li>Fotos in Ruhe ansehen, aussuchen, Nummern der gewünschten Fotos notieren<br />
             Einzelbild: 5 € (auch Geschwister-/Familienfoto), Gruppenbild: 3 €</li>
-        <li>Bezahlung via <a href="https://paypal.me/BiancaKrause03" target="_blank" rel="noopener noreferrer">PayPal.me/BiancaKrause03</a> oder an bianca-krause@aikq.de <br />
+        <li>Bezahlung via <a href="https://paypal.me/YourPayPalID" target="_blank" rel="noopener noreferrer">PayPal.me/Your-ID</a> oder an your-email@example.com <br />
             Alternativ: Barzahlung in der Kita - Leserliche Liste mit Nummer des Kindes + Nummern der Fotos samt passendem Betrag in einem verschlossenen Briefumschlag in der Kita abgeben.
             <p className="gallery-note"><strong>Achtung:</strong> unbedingt Nutzername (4 oder 5 stellige Zahlenkombination)  + Fotonummern angeben!</p>
             </li>
@@ -82,7 +82,7 @@ useEffect(() => {
         </li>
       </ol>
 
-      <p>Bei Fragen oder Problemen: WhatsApp an <strong>(0176 6238 5445)</strong> oder E-Mail an <strong>bianca-krause@aikq.de</strong></p>
+      <p>Questions or issues? WhatsApp at <strong>(0123 456 789)</strong> or email <strong>you@example.com</strong></p>
 
       <p>Diese Galerie enthält <strong>{images.length}</strong> Bilder</p>
 
@@ -121,12 +121,12 @@ useEffect(() => {
   }}
 >
   <p style={{ margin: 0 }}><strong>Impressum</strong></p>
-  <p style={{ margin: 0 }}>
-    Bianca Krause<br />
-    Hauptstr. 6<br />
-    36145 Hofbieber<br />
-    E-Mail: bianca-krause@aikq.de<br />
-    Tel: 0176 6238 5445
+    <p style={{ margin: 0 }}>
+    Your Name<br />
+    Your Address Line 1<br />
+    Your City, ZIP Code<br />
+    Email: you@example.com<br />
+    Phone: 0123 456 789
   </p>
   {/* Optional: USt-ID angeben, falls vorhanden */}
   {/* <p style={{ margin: 0 }}>USt-ID: DE123456789</p> */}
