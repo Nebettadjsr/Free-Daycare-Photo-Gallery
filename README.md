@@ -21,7 +21,7 @@
   * `wm: "Y"` → watermark on: photos render with an overlay; clicks do nothing.
   * `wm: "N"` → watermark off: clicking the photo initiates a direct download.
 
-### 2. Folder Structure & JSON Metadata
+## 2. Folder Structure & JSON Metadata
 
 ```
 public/
@@ -33,8 +33,32 @@ public/
       ...
 ```
 
-* Each `photos.json` preserves a `note` field to communicate payment issues or other instructions to clients.
-* The `generate-photo-lists.js` script can scan a specific child folder, preserve its `note`, and regenerate the photos array automatically.
+- **credentials.json** is simply a map of `{ childId: "Parent Name" }`.  
+  - _Pro tip_: I asked ChatGPT to generate a range of numeric IDs of the desired length and assign each a password/name, then dumped that straight into `credentials.json` so I didn’t have to hand-type dozens of entries.
+
+- Once you have your `credentials.json`, run:
+  ```bash
+  node create-folders.js
+  ```
+  which reads every key in `credentials.json` and lazily (we’re programmers, after all 😏) creates its corresponding folder under `public/images/`.
+
+- Each `photos.json` lives inside its child’s folder and holds:
+  ```json
+  {
+    "note": "…optional message for payment or special instructions…",
+    "photos": [
+      { "file": "IMG_0001.jpg", "wm": "Y" },
+      { "file": "IMG_0002.jpg", "wm": "N" },
+      …
+    ]
+  }
+  ```
+  - You can hand-edit the `note` if you need to flag a payment issue or send a custom message to the parent.
+  - To update automatically—preserving any `note`—use:
+    ```bash
+    node generate-photo-lists.js 54902
+    ```
+    (or omit the ID to rebuild **all** folders at once).
 
 ### 3. Credentials & Privacy
 
