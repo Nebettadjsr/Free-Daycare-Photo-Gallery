@@ -12,7 +12,8 @@
 
 ### 1. Watermark Implementation
 
-* We overlay a single watermark image at render time instead of embedding it into each photo file.
+* We overlay a single watermark image at render time instead of embedding it into each photo file. 
+* File is stored in `public/images/watermark.png`. Replace File as needed. Make sure its a PNG with transparent Background.
 * **Pros**: No duplicate files, minimal storage overhead, lower storage costs.
 * **Cons**: Not foolproof security—anyone determined can remove an overlay or inspect the DOM.
 * **Behavior Flags (`wm`)**:
